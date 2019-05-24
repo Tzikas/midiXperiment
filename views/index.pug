@@ -1,0 +1,10 @@
+extends layout
+
+block content
+  h1= title
+  p Welcome to #{title}
+
+  // SINGLE FILE
+  form(action='/uploadfile', enctype='multipart/form-data', method='POST')
+    input(type='file', name='myFile')
+    input(type='submit', value='Upload a file')
